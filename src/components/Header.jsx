@@ -1,6 +1,5 @@
 import {svgCampana, svgMensajes} from '../utils/svg'
 
-
 const Header = () => {
     return(
         <div className='headerdiv'>

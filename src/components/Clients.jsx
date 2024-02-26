@@ -10,7 +10,6 @@ const Clients = () => {
         const fetchData = async () => {
             const res = await fetch('https://jsonplaceholder.typicode.com/users');
             const data = await res.json();
-            console.log(data)
             setResponseData(data);
             setFilteredData(data);
         };
@@ -20,7 +19,6 @@ const Clients = () => {
       useEffect(() => {
         if (selectClient && responseData) {
           const filtered = responseData.filter(item => item.id === selectClient);
-          console.log(responseData)
           setFilteredData(filtered);
         }
       }, [selectClient, responseData]);
@@ -35,7 +33,6 @@ const Clients = () => {
           setResponseData(updatedData);
           setFilteredData(updatedData);
           setSelectClient(null);
-          console.log(filteredData)
         }
       };
 
